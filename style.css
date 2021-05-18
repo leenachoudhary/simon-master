@@ -1,0 +1,52 @@
+.top, .bottom {
+    height: 50%;
+    z-index: 1;
+}
+
+.left, .right {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    margin-right: -4px;
+    z-index: 1;
+}
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.title{
+    text-decoration: underline;
+}
+
+.prompt{
+    text-align: center;
+    z-index: 2;
+    vertical-align: middle;
+    position:absolute;
+    width: 400px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -200px;
+    background: white; 
+    border: 2px solid black;   
+}
+
+#green{
+    background-color: green;
+}
+
+#red{
+    background-color: red;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#blue{
+    background-color: blue;
+}

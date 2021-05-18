@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="modal" id="start" tabindex="-1" role="dialog" aria-labelledby="startModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="startModalLabel">Simon Says</h5>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>Press each button in the order they light up</li>
+              <li>Wait for the pattern to end playing before pressing buttons</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="startGame()" data-dismiss="modal">Start Game</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="end" tabindex="-1" role="dialog" aria-labelledby="endModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="endModalLabel">Simon Says</h5>
+          </div>
+          <div class="modal-body">
+            You lost!
+            <p id="score">
+            Score:
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="location.reload()" data-dismiss="modal">Play Again?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="top">
+      <div class="left" id="green">
+      </div>
+      <div class="right" id="red">
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="left" id="yellow">
+      </div>
+      <div class="right" id="blue">
+      </div>
+    </div>
+  </body>
+</html>
